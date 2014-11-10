@@ -17,6 +17,7 @@ public class MainActivity extends Activity
 	private ToggleButton toggle;
 	private Context context;
 	private TextView textView;
+	private boolean hasLight;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -28,17 +29,18 @@ public class MainActivity extends Activity
 		textView = (TextView) findViewById(R.id.textView1);
 		
 		setupListeners();
-		checkFlashligh();
+		checkFlashlight();
 	}
 
-	private void checkFlashligh()
+	private void checkFlashlight()
 	{
 		if (!context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH))
 		{
 			textView.setText("Sorry, your device does not have a flashlight.");
+			haslight = false;
+			//Should the app automatically close itslef here?
 		}
-
-		
+		haslight = true;
 	}
 
 	private void setupListeners()
@@ -54,7 +56,16 @@ public class MainActivity extends Activity
 				p.setFlashMode(Parameters.FLASH_MODE_TORCH);
 				cam.setParameters(p);
 				cam.startPreview();
-				
+				//if(isChecked)
+				//{
+					//Turn Flashlight off
+					//Toast Flashlight off
+				//}
+				//else
+				//{
+					//Turn Flashlight on
+					//Toast Flashlight on
+				//}
 			}
 		});
 		
