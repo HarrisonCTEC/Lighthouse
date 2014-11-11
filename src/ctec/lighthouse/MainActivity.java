@@ -34,13 +34,12 @@ public class MainActivity extends Activity
 
 	private void checkFlashlight()
 	{
-		if (!context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH))
+		haslight = context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH;
+		if (!haslight)
 		{
 			textView.setText("Sorry, your device does not have a flashlight.");
-			haslight = false;
 			//Should the app automatically close itslef here?
 		}
-		haslight = true;
 	}
 
 	private void setupListeners()
@@ -61,7 +60,7 @@ public class MainActivity extends Activity
 					//Turn Flashlight off
 					//Toast Flashlight off
 				//}
-				//else
+				//else if (!isChecked)
 				//{
 					//Turn Flashlight on
 					//Toast Flashlight on
