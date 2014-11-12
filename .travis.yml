@@ -1,4 +1,5 @@
 language: android
+
 env:
   global:
     secure: kpOs8EbkNSVSOwff2q9nSB4i+i5HI5OFvEcGLZWRe0mVQJZaAECnv+tQ4ZDqNJHB4yvPzH0DYfxlos7q+NJfhwue1m3yRhGNEe7xMV57qwQfGNe8hiyiMzrLo9WfiDNCnqzDGXbjYH47VYroGEQo/SbmwrzwW8ES3J4KMxQZzmQ=
@@ -26,11 +27,14 @@ android:
     # if you need to run emulator(s) during your tests
     - sys-img-armeabi-v7a-android-19
 
-script: ant debug install
-
 notifications:
   email:
-    - HARRISON_BOXCAR_EMAIL
+    recipients:
+      - $HARRISON_BOXCAR_EMAIL
+    on_success: always
+    on_failure: always
+
+script: ant debug install
 
 #deploy:
 #  provider: releases
