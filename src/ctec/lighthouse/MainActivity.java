@@ -34,7 +34,7 @@ public class MainActivity extends Activity
 
 	private void checkFlashlight()
 	{
-		haslight = context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH;
+		haslight = context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
 		if (!haslight)
 		{
 			textView.setText("Sorry, your device does not have a flashlight.");
