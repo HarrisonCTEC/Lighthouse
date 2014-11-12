@@ -1,4 +1,8 @@
 language: android
+env:
+  global:
+    secure: kpOs8EbkNSVSOwff2q9nSB4i+i5HI5OFvEcGLZWRe0mVQJZaAECnv+tQ4ZDqNJHB4yvPzH0DYfxlos7q+NJfhwue1m3yRhGNEe7xMV57qwQfGNe8hiyiMzrLo9WfiDNCnqzDGXbjYH47VYroGEQo/SbmwrzwW8ES3J4KMxQZzmQ=
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -23,6 +27,10 @@ android:
     - sys-img-armeabi-v7a-android-19
 
 script: ant debug install
+
+notifications:
+  email:
+    - HARRISON_BOXCAR_EMAIL
 
 #deploy:
 #  provider: releases
