@@ -34,7 +34,7 @@ notifications:
     on_success: always
     on_failure: always
 
-script: ant build
+script: ant debug
 
 #deploy:
 #  provider: releases
