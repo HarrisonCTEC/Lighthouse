@@ -1,9 +1,5 @@
 language: android
 
-env:
-  global:
-    secure: kpOs8EbkNSVSOwff2q9nSB4i+i5HI5OFvEcGLZWRe0mVQJZaAECnv+tQ4ZDqNJHB4yvPzH0DYfxlos7q+NJfhwue1m3yRhGNEe7xMV57qwQfGNe8hiyiMzrLo9WfiDNCnqzDGXbjYH47VYroGEQo/SbmwrzwW8ES3J4KMxQZzmQ=
-
 android:
   components:
     # Uncomment the lines below if you want to
@@ -30,7 +26,8 @@ android:
 notifications:
   email:
     recipients:
-      - $HARRISON_BOXCAR_EMAIL
+      # Harrison's boxcar email
+      - secure: eRar+ajmh/yq8yH76XyvqUCbIf8xifnam7YWqhtFJISa6bSy9pM3nvXH7YebHgxLjzlMfxjUmPRhU8UdBwC879+0Utic32DBNqVm4jRq1oUHirEoe1JcxcIYsNgbktgV6ouEzIxXtD7vJh5f3ufbegpEcb37sTKfCa4WHMSTELc=
     on_success: always
     on_failure: always
 
